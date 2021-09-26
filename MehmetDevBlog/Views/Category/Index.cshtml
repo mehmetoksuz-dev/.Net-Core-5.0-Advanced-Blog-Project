@@ -5,8 +5,9 @@
     Layout = null;
 }
 
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
 
-<table>
+<table class="table table-bordered">
     <tr>
         <th>ID</th>
         <th>Category Name</th>
@@ -22,7 +23,7 @@
         <td>@item.CategoryStatus</td>
         <td>@item.CategoryDescription</td>
         <td><a href="#" class="btn btn-warning">Detais</a></td>
-        <td><a href="#" class="btn btn-warning">Delete</a></td>
+        <td><a href="#" class="btn btn-danger">Delete</a></td>
         </tr>
     }
 </table>
