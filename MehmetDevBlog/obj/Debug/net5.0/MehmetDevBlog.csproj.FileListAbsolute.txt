@@ -229,3 +229,13 @@ C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\Me
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\UserLayout.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Partial1.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Partial2.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Partial3.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Blog\BlogReadAll.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Comment\PartialAddComment.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Comment\CommentListByBlog.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Components\CommentList\Default.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Components\CommentListByBlog\Default.cshtml.g.cs
