@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3cO9zT64yW4kwdychExifGwHPZlsiMndf36DMTRLAtnGhq8ttXw56dIZ0sdT3oMrJF9Vqxz+jz0M/Z3MrZjqOg==",
+  "dgSpecHash": "yXx2Ljfhi4o+rK8fswhoAkgJ0xOUJc83ZmvQ7DCpRnoWL2Z3FVrdlpiDvjDj3X+qWJx2MS7/oWMcFMTovpcRGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\mehme\\source\\repos\\MehmetDevBlog\\.Net-Core-5.0-Advanced-Blog-Project\\MehmetDevBlog\\MehmetDevBlog.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mehme\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
+    "C:\\Users\\mehme\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.3\\fluentvalidation.aspnetcore.10.3.3.nupkg.sha512",
+    "C:\\Users\\mehme\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.3\\fluentvalidation.dependencyinjectionextensions.10.3.3.nupkg.sha512",
     "C:\\Users\\mehme\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mehme\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\mehme\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

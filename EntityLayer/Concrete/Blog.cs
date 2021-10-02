@@ -17,10 +17,10 @@ namespace EntityLayer.Concrete
         public string BlogImage { get; set; }
         public DateTime BlogCreateDate { get; set; } //string unutuldu burası bende datetime
         public bool BlogStatus { get; set; }
-
         public int CategoryID { get; set; } //rship
         public Category Category { get; set; } //rship
-
+        public int WriterID { get; set; } //rship
+        public Writer Writer { get; set; } //rship
         public List<Comment> Comments { get; set; } //rship
     }
 }
