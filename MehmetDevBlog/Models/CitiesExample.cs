@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
+using BusinessLayer.ValidationRules;
 
 namespace MehmetDevBlog.Models
 {
+
     public class CitiesExample
     {
         public Writer Writer { get; set; }

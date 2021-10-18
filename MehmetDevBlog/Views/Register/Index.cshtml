@@ -34,7 +34,7 @@
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword1 mb-2">Password</label>
                             @Html.TextBoxFor(x=>x.Writer.WriterPassword, new {@class = "form-control"})
-                            @Html.ValidationMessageFor(x=>x.Writer.WriterPassword,"", new { @class = "text-danger")
+                            @Html.ValidationMessageFor(x=>x.Writer.WriterPassword,"", new { @class = "text-danger"})
                             @*                            <input type="password" class="form-control" id="password1" name="WriterPassword" placeholder="" required="">
                             *@
                         </div>
@@ -69,6 +69,8 @@
         $('#btn1').click(function(){
             swal("Terms", "Information and news e-mails will continue to be sent via the e-mail address you provide on our site, in a way that will not be spam. Your passwords and e-mail addresses are securely stored in our databases so that no user can access them.");
         });
+
+        $('')
     </script>
 </section>
 

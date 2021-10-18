@@ -14,12 +14,13 @@ namespace DataAccessLayer.Concrete
         {
             optionsBuilder.UseSqlServer("server=DESKTOP-SS4L2KH; database=DevBlogDb; integrated security=true;"); //CoreBlogDb
         }
-        public DbSet<About> Abouts {get; set;}
+        public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Writer> Writers { get; set; }
+        public DbSet<NewsLetter> NewsLetter { get; set; }
 
     }
 }

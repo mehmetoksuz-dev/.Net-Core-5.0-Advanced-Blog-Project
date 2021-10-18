@@ -247,3 +247,5 @@ C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\Me
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\MehmetDevBlog.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterLastBlog\Default.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\NewsLetter\SubscribeMail.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\ErrorPage\Error1.cshtml.g.cs
