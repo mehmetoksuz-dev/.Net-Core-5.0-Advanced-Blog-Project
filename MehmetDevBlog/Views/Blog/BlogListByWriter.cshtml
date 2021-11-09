@@ -1,0 +1,75 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+
+@{
+    ViewData["Title"] = "BlogListByWriter";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Writer's Blog</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Blog Title</th>
+        <th>Creation Date</th>
+        <th>Category</th>
+        <th>Situation</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.BlogID</th>
+            <td>@item.BlogTitle</td>
+            <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))</td>
+            <td>@item.Category.CategoryName</td>
+            <td>
+                @if (item.BlogStatus == true)
+                {
+                    <span class="badge badge-success">Active</span>
+                }
+                else
+                {
+                    <span class="badge badge-secondary">Passive</span>
+                }
+            </td>
+            <td><a id="Sil_@item.BlogID" href="/Blog/DeleteBlog/@item.BlogID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Blog/EditBlog/@item.BlogID" class="btn btn-success">Update</a></td>
+
+            <script>
+                $('#Sil_@item.BlogID').click(function (e) {
+                                                        e.preventDefault();
+                                                        var linkURL = $(this).attr("href");
+                                                        Swal.fire({
+                                                            title: 'UYARI!',
+                                                            text: "Blog yazısını silmek istediğinize emin misiniz?",
+                                                            icon: 'warning',
+                                                            showCancelButton: true,
+                                                            showCancelButton: true,
+                                                            confirmButtonColor: '#5CBA6C',
+                                                            cancelButtonColor: '#d33',
+                                                            confirmButtonText: 'Evet',
+                                                            cancelButtonText: 'Hayır'
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                window.location.href = linkURL;
+                                                                Swal.fire(
+                                                                    'Silindi!',
+                                                                    'Seçilen Blog Silindi.',
+                                                                    'success'
+                                                                )
+                                                            }
+                                                            else if (result.dismiss === Swal.DismissReason.cancel) {
+                                                            }
+                                                        })
+                                                    });
+            </script>
+        </tr>
+    }
+</table>
+<a href="/Blog/BlogAdd/" class="btn btn-primary">Create New Blog</a>
+
+
+
