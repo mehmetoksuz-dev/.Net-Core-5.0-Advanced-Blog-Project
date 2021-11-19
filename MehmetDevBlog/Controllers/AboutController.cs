@@ -11,9 +11,9 @@ namespace MehmetDevBlog.Controllers
     public class AboutController : Controller
     {
         AboutManager abm = new AboutManager(new EfAboutRepository());
-        public IActionResult Index()
+        public IActionResult Index() 
         {
-            var values = abm.GetList();
+            var values = abm.GetList(); //klasik veri çekme op.
             return View(values);
         }
         public PartialViewResult SocialMediaAbout()

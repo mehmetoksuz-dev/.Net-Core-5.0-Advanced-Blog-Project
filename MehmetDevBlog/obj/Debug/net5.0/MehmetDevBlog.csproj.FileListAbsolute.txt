@@ -268,3 +268,7 @@ C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\Me
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Components\BlogListDashboard\Default.cshtml.g.cs
 C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Components\CategoryListDashboard\Default.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterAboutOnDashboard\Default.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Writer\WriterEditProfile.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Writer\WriterAdd.cshtml.g.cs
+C:\Users\mehme\source\repos\MehmetDevBlog\.Net-Core-5.0-Advanced-Blog-Project\MehmetDevBlog\obj\Debug\net5.0\Razor\Views\Notification\AllNotifications.cshtml.g.cs

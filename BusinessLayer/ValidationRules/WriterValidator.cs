@@ -19,7 +19,7 @@ namespace BusinessLayer.ValidationRules
                 .Matches(@"[a-z]+").WithMessage("Your password must contain at least one lowercase letter.")
                 .Matches(@"[0-9]+").WithMessage("Your password must contain at least one number.");
             RuleFor(x => x.WriterName).MinimumLength(2).WithMessage("Min length 2.");
-            RuleFor(x => x.WriterName).MaximumLength(5).WithMessage("Max length 50.");
+            RuleFor(x => x.WriterName).MaximumLength(50).WithMessage("Max length 50.");
         }
     }
 }

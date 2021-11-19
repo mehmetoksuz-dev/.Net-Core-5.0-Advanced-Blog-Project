@@ -21,7 +21,7 @@ namespace MehmetDevBlog.Controllers
         [HttpPost]
         public IActionResult Index(Contact p)
         {
-            p.ContactDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            p.ContactDate = DateTime.Parse(DateTime.Now.ToShortDateString()); //zamanı dönüstür
             p.ContactStatus = true;
             cm.ContactAdd(p);
             return RedirectToAction("Index","Blog");
