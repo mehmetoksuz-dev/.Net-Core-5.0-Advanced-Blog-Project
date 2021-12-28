@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -13,11 +14,11 @@ using System.Threading.Tasks;
 
 namespace MehmetDevBlog.Controllers
 {
-    [AllowAnonymous]
     public class BlogController : Controller
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
         CategoryManager cm = new CategoryManager(new EfCategoryRepository());
+        Context c = new Context();
         public IActionResult Index()
         {
             var values = bm.GetBlogListWithCategory();
@@ -32,7 +33,10 @@ namespace MehmetDevBlog.Controllers
 
         public IActionResult BlogListByWriter()
         {
-            var values = bm.GetListWithCategoryByWriterBm(1);
+           //context yaratip where ile id erisip onun bloglarini aliyoruz.
+            var userMail = User.Identity.Name; //mail al
+            var writerId = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterID).FirstOrDefault();
+            var values = bm.GetListWithCategoryByWriterBm(writerId);
             return View(values);
         }
         [HttpGet]
@@ -50,13 +54,15 @@ namespace MehmetDevBlog.Controllers
         [HttpPost]
         public IActionResult BlogAdd(Blog p)
         {
+            var userMail = User.Identity.Name; //mail al
+            var writerId = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterID).FirstOrDefault();
             BlogValidator bv = new BlogValidator();
             ValidationResult results = bv.Validate(p);
             if (results.IsValid)
             {
                 p.BlogStatus = true; //Mod olayı olursa başta burası false olur admin onaylar statusü başta bu yüzden ekledim
                 p.BlogCreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                p.WriterID = 1;
+                p.WriterID = writerId; //yazarin idsine göre blogu o yazara kaydet.
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }
@@ -77,7 +83,7 @@ namespace MehmetDevBlog.Controllers
         }
 
         [HttpGet]
-        public IActionResult EditBlog(int id)
+        public IActionResult EditBlog(int id) //key value mantigi ile calistirdigim kisim
         {
             var blogvalue = bm.TGetById(id);
             List<SelectListItem> categoryvalues = (from x in cm.GetList()
@@ -93,7 +99,9 @@ namespace MehmetDevBlog.Controllers
         [HttpPost]
         public IActionResult EditBlog(Blog p)
         {
-            p.WriterID = 1;
+            var userMail = User.Identity.Name; //mail al
+            var writerId = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterID).FirstOrDefault();
+            p.WriterID = writerId;
             var value = bm.TGetById(p.BlogID);
             p.BlogCreateDate = value.BlogCreateDate;
             p.BlogStatus = true;

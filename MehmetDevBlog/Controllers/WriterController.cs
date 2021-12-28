@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -19,9 +20,15 @@ namespace MehmetDevBlog.Controllers
     public class WriterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
+        [Authorize]
         //[AllowAnonymous]
         public IActionResult Index()
         {
+            var userMail = User.Identity.Name; //mail al
+            ViewBag.v = userMail;
+            Context c = new Context();
+            var writerName = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterName).FirstOrDefault();
+            ViewBag.v2 = writerName;
             return View();
         }
         public IActionResult WriterProfile()
@@ -32,12 +39,10 @@ namespace MehmetDevBlog.Controllers
         {
             return View();
         }
-        [AllowAnonymous]
         public IActionResult Test() //test veri dönecek mi?
         {
             return View();
         }
-        [AllowAnonymous]
         public PartialViewResult WriterNavbarPartial() //navar partial oldu
         {
             return PartialView();
@@ -47,14 +52,15 @@ namespace MehmetDevBlog.Controllers
         {
             return PartialView();
         }
-        [AllowAnonymous]
         [HttpGet]
         public IActionResult WriterEditProfile() 
         {
-            var writesvalues = wm.TGetById(1);
-            return View(writesvalues);
+            Context c = new Context();
+            var userMail = User.Identity.Name;
+            var writerId = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterID).FirstOrDefault();
+            var writervalues = wm.TGetById(writerId);
+            return View(writervalues);
         }
-        [AllowAnonymous]
         [HttpPost]
         public IActionResult WriterEditProfile(Writer p)
         {
