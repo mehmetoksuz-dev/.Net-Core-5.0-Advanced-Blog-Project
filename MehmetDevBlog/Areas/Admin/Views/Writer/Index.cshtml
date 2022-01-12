@@ -7,6 +7,8 @@
 <br />
 <button type="button" id="btnGetList" class="btn btn-outline-primary">Writer List</button>
 <button type="button" id="btnGetById" class="btn btn-outline-success">Get Writer</button>
+<button type="button" id="btnAddWriter" class="btn btn-outline-info">Add Writer</button>
+<button type="button" id="btnDelWriter" class="btn btn-outline-danger">Delete Writer</button>
 
 <br />
 <br />
@@ -18,7 +20,19 @@
     here will come only one writer
 </div>
 <div>
-    <input type="text" id="writerid" placeholder="Enter Writer Id" class="form-control"/>
+    <input type="text" id="writerid" placeholder="Enter Writer Id" class="form-control" />
+</div>
+<br />
+<div>
+    <h3>Add Writer</h3>
+    <input type="text" class="form-control" id="txtWriterMail" placeholder="Writer Mail" />
+    <input type="text" class="form-control" id="txtWriterName" placeholder="Writer Name" />
+    <input type="text" class="form-control" id="txtWriterPass" placeholder="Writer Password" />
+    <br />
+</div>
+<br />
+<div>
+    <input type="text" class="form-control" id="txtDelId" placeholder="Writer Id For Delete" />
 </div>
 
 @section scripts{
@@ -34,10 +48,10 @@
                   console.log(w);
                   let tablehtml = "<table class=table table-bordered><tr><th> Writer Id </th> <th> Writer Name </th></tr>";
                   $.each(w,(index, value) => {
-                      tablehtml+=`<tr><td>${value.Id}</td> <td>${value.Name}</td> </tr>`
+                      tablehtml+=`<tr><td>${value.WriterID}</td> <td>${value.WriterName}</td> </tr>`
                   });
                   tablehtml+="</table>";
-                  $("#writerList").html(tablehtml);
+                  $("#getWriter").html(tablehtml);
               }
           });
     });
@@ -53,9 +67,48 @@
             success: function(func){
                 let w = jQuery.parseJSON(func);
                 console.log(w);
+
+                let tablehtml = "<table class=table table-bordered><tr><th> Writer Id </th> <th> Writer Name </th></tr>";
+                $.each(w,(index, value) => {
+                    tablehtml+=`<tr><td>${value.WriterID}</td> <td>${value.WriterName}</td> </tr>`
+                });
+                tablehtml+="</table>";
+                $("#writerList").html(tablehtml);
             }
         });
         console.log(id);
+    });
+
+    $("#btnAddWriter").click(function(){
+        let writer = {
+            //Id: $("#txtWriterId").val(),
+            Mail : $("#txtWriterName").val(),
+            Name: $("#txtWriterName").val(),
+            Password: $("#txtWriterPass").val()
+        };
+
+        $.ajax({
+            type:"post",
+            url:"/Admin/Writer/AddWriter",
+            data: writer,
+            success: function(func){
+                let result = jQuery.parseJSON(func);
+                alert("Writer Added Successfully.");
+            }
+        });
+    });
+
+    $("#btnDelWriter").click(x=>{
+        let id = $("#txtDelId").val();
+
+        $.ajax({
+            url:"/Admin/Writer/DeleteWriter/"+id,
+            type: "post",
+            dataType: "json",
+            success:function(func){
+                alert("Writer Deleted Successfully.");
+            }
+        });
     });
 </script>
  }

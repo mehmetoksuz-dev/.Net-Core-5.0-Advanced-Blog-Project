@@ -18,7 +18,8 @@ namespace BusinessLayer.Concrete
             _blogDal = blogDal;
         }
 
-        public List<Blog> GetBlogListWithCategory()
+        public List<Blog> GetBlogListWithCategory
+            ()
         {
             return _blogDal.GetListWithCategory();
         }
@@ -64,5 +65,10 @@ namespace BusinessLayer.Concrete
         {
             _blogDal.Update(t);
         }
+
+        //public List<Blog> GetBlogListWithCategory()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

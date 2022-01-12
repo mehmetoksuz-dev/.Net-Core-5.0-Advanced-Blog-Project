@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MehmetDevBlog.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class BlogController : Controller
     {
         public IActionResult Index()

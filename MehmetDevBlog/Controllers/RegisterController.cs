@@ -4,6 +4,7 @@ using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
 using MehmetDevBlog.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace MehmetDevBlog.Controllers
 {
+    [AllowAnonymous] //kayit
     public class RegisterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
@@ -20,7 +22,7 @@ namespace MehmetDevBlog.Controllers
 
         public IActionResult Index()
         {
-            return View(cities);
+            return View();
         }
         [HttpPost] //button tetiklenince calisiyor. 
         public IActionResult Index(Writer p) //get ve post tanımlanırken methodlarin isimleri ayni olmalidir for ex => ikisi de Index
@@ -32,7 +34,7 @@ namespace MehmetDevBlog.Controllers
                 p.WriterStatus = true;
                 p.WriterAbout = "Deneme Test";
                 wm.TAdd(p);
-                return RedirectToAction("Index", "Blog");
+                return RedirectToAction("Index", "Login"); //Index,Blog
             }
             else
             {

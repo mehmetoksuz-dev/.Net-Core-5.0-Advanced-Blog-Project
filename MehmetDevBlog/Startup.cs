@@ -71,10 +71,11 @@ namespace MehmetDevBlog
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => //proje buradan calisiyor
-            { 
+            {
                 endpoints.MapControllerRoute( //arealari al..
                 name: "areas",
                 pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 
                 endpoints.MapControllerRoute(
                 name: "default",
