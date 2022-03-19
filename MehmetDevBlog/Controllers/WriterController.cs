@@ -45,9 +45,13 @@ namespace MehmetDevBlog.Controllers
         }
         public PartialViewResult WriterNavbarPartial() //navar partial oldu
         {
+            var userMail = User.Identity.Name; //mail al
+            Context c = new Context();
+            var writerName = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterName).FirstOrDefault();
+            TempData["test"] = writerName;
             return PartialView();
         }
-        [AllowAnonymous]
+        
         public PartialViewResult WriterFooterPartial() //footer partial oldu
         {
             return PartialView();

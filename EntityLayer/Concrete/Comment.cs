@@ -18,6 +18,6 @@ namespace EntityLayer.Concrete
         public int BlogScore { get; set; }
         public bool CommentStatus { get; set; }
         public int BlogID { get; set; } //rship
-        public Blog Blog { get; set; }
+        public Blog Blog { get; set; } //add foreign key to blog
     }
 }

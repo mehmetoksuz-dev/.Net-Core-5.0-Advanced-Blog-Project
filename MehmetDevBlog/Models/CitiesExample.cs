@@ -12,7 +12,8 @@ namespace MehmetDevBlog.Models
 
     public class CitiesExample
     {
-        public Writer Writer { get; set; }
+        public static Writer Writer { get; set; }
+       
         public int cityId { get; set; }
         public string cityName { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -42,6 +43,13 @@ namespace MehmetDevBlog.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> WriterLogOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Blog");
         }
     }
 }

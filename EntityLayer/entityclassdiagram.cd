@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EntityLayer.Concrete.About">
+    <Position X="4" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAACQAAAAAAAAAAAAAABAAAAAAAAAAACU=</HashCode>
+      <FileName>Concrete\About.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityLayer.Concrete.Blog">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACACARAAAAAAEEAAAAAAAAAAAAQACAAAEAKAA=</HashCode>
+      <FileName>Concrete\Blog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityLayer.Concrete.Category">
+    <Position X="2" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAGAAAAABAAAAAAACAAA=</HashCode>
+      <FileName>Concrete\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityLayer.Concrete.Comment">
+    <Position X="4" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAABAABAAACAAAAAAAAgAAAgABACAAAAIAA=</HashCode>
+      <FileName>Concrete\Comment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityLayer.Concrete.Contact">
+    <Position X="7.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAgAAAAAAwAAAAAAAAAAAAAQAAAAEAAAAAAIAAAAA=</HashCode>
+      <FileName>Concrete\Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityLayer.Concrete.NewsLetter">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACQAAAAA=</HashCode>
+      <FileName>Concrete\NewsLetter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityLayer.Concrete.Writer">
+    <Position X="7.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAACAACAAAAAAAAAAQAEAAAIAAAQBAAEAAAAA=</HashCode>
+      <FileName>Concrete\Writer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
